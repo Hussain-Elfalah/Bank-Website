@@ -147,6 +147,29 @@
   .nav ul li {
     margin: 0.5rem;
   }
+  
+  .desktop-settings {
+    display: none;
+  }
+  
+  .mobile-settings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .mobile-settings button {
+    margin: 8px 0;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .nav.active .mobile-settings {
+    display: flex;
+  }
 }
 
 @media (max-width: 480px) {
@@ -205,4 +228,35 @@
 
 .mobile-menu-toggle:hover {
   transform: scale(1.1);
+}
+
+/* إخفاء أزرار الإعدادات المحمولة في وضع سطح المكتب */
+.mobile-settings {
+  display: none;
+}
+
+/* تنسيق أزرار الإعدادات المحمولة */
+@media (max-width: 768px) {
+  .desktop-settings {
+    display: none;
+  }
+  
+  .mobile-settings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .mobile-settings button {
+    margin: 8px 0;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .nav.active .mobile-settings {
+    display: flex;
+  }
 } 

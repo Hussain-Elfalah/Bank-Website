@@ -13,7 +13,7 @@ export const translations = {
       returnTime: "سنعود قريبًا"
     },
     footer: {
-      copyright: "© 2025 بنك المستقبل. جميع الحقوق محفوظة",
+      copyright: "© 2025 بنك السراج. جميع الحقوق محفوظة",
       links: {
         privacy: "سياسة الخصوصية",
         terms: "الشروط والأحكام",
@@ -39,7 +39,7 @@ export const translations = {
       returnTime: "We'll be back soon"
     },
     footer: {
-      copyright: "© 2025 Future Bank. All rights reserved",
+      copyright: "© 2025 Al Serag Bank. All rights reserved",
       links: {
         privacy: "Privacy Policy",
         terms: "Terms & Conditions",

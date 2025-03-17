@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaHeart } from 'react-icons/fa';
 import './Footer.css';
+import logo from '../assets/Logo_White.svg';
 import { AppContext } from '../context/AppContext';
 import { translations } from '../translations';
 
@@ -18,7 +19,8 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-grid">
           <div className="footer-brand">
-            <h2>{language === 'ar' ? 'بنك المستقبل' : 'Future Bank'}</h2>
+            {/* <h2>{language === 'ar' ? 'بنك السراج' : 'AL Serag Bank'}</h2> */}
+            <img src={logo} alt="Sirag Bank" />
             <p>{t.footer.copyright}</p>
           </div>
           <div className="footer-links">

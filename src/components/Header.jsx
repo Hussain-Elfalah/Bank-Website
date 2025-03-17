@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { FaMoon, FaSun, FaLanguage, FaBars, FaTimes } from 'react-icons/fa';
 import './Header.css';
 import logo from '../assets/logo.svg';
+import logoDark from '../assets/Logo_White.svg';
 import { AppContext } from '../context/AppContext';
 import { translations } from '../translations';
 
@@ -18,7 +19,7 @@ const Header = () => {
     <header className="header">
       <div className="logo">
         {/* <h1>{language === 'ar' ? 'بنك السراج' : 'Sirag Bank'}</h1> */}
-        <img src={logo} alt="Sirag Bank" />
+        <img src={darkMode ? logoDark : logo} alt="Sirag Bank" />
       </div>
       
       <button className="mobile-menu-toggle" onClick={toggleMobileMenu} aria-label="Toggle menu">
@@ -32,9 +33,19 @@ const Header = () => {
           <li><a href="#">{t.header.about}</a></li>
           <li><a href="#">{t.header.contact}</a></li>
         </ul>
+        
+        <div className="mobile-settings">
+          <button className="theme-toggle" onClick={toggleTheme} aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}>
+            {darkMode ? <FaSun /> : <FaMoon />}
+          </button>
+          <button className="language-toggle" onClick={toggleLanguage} aria-label="Change language">
+            <FaLanguage />
+            <span>{t.settings.language}</span>
+          </button>
+        </div>
       </nav>
       
-      <div className="settings">
+      <div className="settings desktop-settings">
         <button className="theme-toggle" onClick={toggleTheme} aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}>
           {darkMode ? <FaSun /> : <FaMoon />}
         </button>
