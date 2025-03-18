@@ -1,0 +1,46 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.dark-mode {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.light-mode {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* تأثير التحميل */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.loading-shimmer {
+  animation: shimmer 2s infinite linear;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.1) 4%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.1) 36%);
+  background-size: 1000px 100%;
+}
+
+/* تحسينات إضافية للتصميم المتجاوب */
+@media (max-width: 768px) {
+  .App {
+    padding-top: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .App {
+    padding-top: 50px;
+  }
+} 

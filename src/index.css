@@ -1,0 +1,87 @@
+:root {
+  --primary-color: #00A4A3;
+  --secondary-color: #243f88;
+  --dark-color: #10153b;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --text-primary: #10153b;
+  --text-secondary: #243f88;
+  --accent-color: #00A4A3;
+  --accent-light: #1cbcbb;
+  --header-bg: #ffffff;
+  --footer-bg: #10153b;
+  --footer-text: #ffffff;
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --gradient-start: rgba(0, 164, 163, 0.8);
+  --gradient-mid: rgba(36, 63, 136, 0.9);
+  --gradient-end: rgba(16, 21, 59, 1);
+}
+
+[data-theme="dark"] {
+  --bg-primary: #10153b;
+  --bg-secondary: #1a1f4d;
+  --text-primary: #f5f5f5;
+  --text-secondary: #cccccc;
+  --accent-color: #00A4A3;
+  --accent-light: #1cbcbb;
+  --header-bg: #0c1030;
+  --footer-bg: #0c1030;
+  --footer-text: #f0f0f0;
+  --card-bg: rgba(26, 31, 77, 0.8);
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --gradient-start: rgba(0, 164, 163, 0.8);
+  --gradient-mid: rgba(0, 140, 140, 0.9);
+  --gradient-end: rgba(36, 63, 136, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  margin: 0;
+  font-family: 'Tajawal', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+[dir="rtl"] {
+  font-family: 'Tajawal', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+[dir="ltr"] {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* تحسين تجربة التمرير */
+html {
+  scroll-behavior: smooth;
+}
+
+/* تحسين تحديد النص */
+::selection {
+  background-color: var(--accent-color);
+  color: white;
+} 
